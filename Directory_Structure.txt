@@ -1,0 +1,19 @@
+
+ThreeJsTemplate
+├───build
+├───css
+├───jsm
+│   ├───controls
+│   │   └───experimental
+│   └───loaders
+│       ├───lwo
+│       └───obj2
+│           ├───bridge
+│           ├───shared
+│           ├───utils
+│           └───worker
+│               ├───main
+│               └───parallel
+├───models
+├───shaders
+└───textures
