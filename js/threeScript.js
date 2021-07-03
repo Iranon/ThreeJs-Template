@@ -11,14 +11,14 @@
     //=============================================================================================
 
     //- Canvas
-    const canvas = document.querySelector(".webglCanvas")
+    const canvas = document.querySelector(".webglCanvas");
 
     //- Size
-    const size = {width: 700, height: 500}
+    const size = {width: 700, height: 500};
 
     //- Scene
-    const scene = new THREE.Scene()
-    scene.background = new THREE.Color( 0x323232 )
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color( 0x323232 );
 
     /*
     //- Loader
@@ -84,12 +84,12 @@
     const geometry = new THREE.PlaneGeometry(16, 16, 256, 256);
     //Textures
     const textureLoader = new THREE.TextureLoader();
-    const colorTexture = textureLoader.load("./textures/ColorTexture.png")
+    const colorTexture = textureLoader.load("./textures/ColorTexture.png");
     colorTexture.minFilter = THREE.NearestFilter;
     colorTexture.magFilter = THREE.NearestFilter;
     colorTexture.wrapS = THREE.RepeatWrapping;
     colorTexture.wrapT = THREE.RepeatWrapping;
-    const displaceTexture = textureLoader.load("./textures/DisplaceTexture.png")
+    const displaceTexture = textureLoader.load("./textures/DisplaceTexture.png");
     displaceTexture.minFilter = THREE.NearestFilter;
     displaceTexture.magFilter = THREE.NearestFilter;
     displaceTexture.wrapS = THREE.RepeatWrapping;
@@ -109,41 +109,41 @@
         wireframe: false,
     } );
 
-    const planeMesh = new THREE.Mesh(geometry, materialShader)
-    scene.add(planeMesh)
+    const planeMesh = new THREE.Mesh(geometry, materialShader);
+    scene.add(planeMesh);
 
     //- Ambient Light
-    const ambLight = new THREE.AmbientLight(0x404040, 3)
+    const ambLight = new THREE.AmbientLight(0x404040, 3);
     scene.add(ambLight);
 
     //- Directional Light
-    const dirLight = new THREE.DirectionalLight(0x808080, 2)
-    dirLight.position.set(-8, 2, 6)
-    scene.add(dirLight)
+    const dirLight = new THREE.DirectionalLight(0x808080, 2);
+    dirLight.position.set(-8, 2, 6);
+    scene.add(dirLight);
 
     //- Camera
-    const camera = new THREE.PerspectiveCamera(60, size.width/size.height)
-    camera.position.set(0, 0, 20)
-    scene.add(camera)
+    const camera = new THREE.PerspectiveCamera(60, size.width/size.height);
+    camera.position.set(0, 0, 20);
+    scene.add(camera);
 
     //- Controls
-    const controls = new OrbitControls(camera, canvas)
+    const controls = new OrbitControls(camera, canvas);
     controls.enableDamping = true;
     controls.dampingFactor = 0.06;
 
     //- Render
-    const renderer = new THREE.WebGLRenderer( { canvas: canvas }, { antialias: true } )
-    renderer.setPixelRatio( window.devicePixelRatio )
-    renderer.setSize(size.width, size.height)
-    animate()
+    const renderer = new THREE.WebGLRenderer( { canvas: canvas }, { antialias: true } );
+    renderer.setPixelRatio( window.devicePixelRatio );
+    renderer.setSize(size.width, size.height);
+    animate();
 
     function animate() {
 
-        requestAnimationFrame(animate)
+        requestAnimationFrame(animate);
         //Animate controls
-        controls.update()   //required if controls.enableDamping = true, or if controls.autoRotate = true
+        controls.update();  //required if controls.enableDamping = true, or if controls.autoRotate = true
         //Render each frame
-        renderer.render(scene, camera)
+        renderer.render(scene, camera);
     }
 
 // |===| End Of ThreeJs Script |===| \\
