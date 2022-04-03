@@ -1,6 +1,7 @@
 //Shaders are stored in .js format in order to make possible to import them into the main script
+//Textures missing: only for example purpose
 
-var vertexShader =
+const vertexShader =
 `
 uniform mat4 projectionMatrix;
 uniform mat4 viewMatrix;
@@ -26,7 +27,7 @@ void main() {
 
 ` ;
 
-var fragmentShader =
+const fragmentShader =
 `
 precision mediump float;
 
@@ -42,4 +43,4 @@ void main() {
 
 `;
 
-export {vertexShader, fragmentShader};
+export { vertexShader, fragmentShader };
