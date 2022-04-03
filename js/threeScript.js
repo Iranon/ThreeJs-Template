@@ -142,4 +142,4 @@
 // |===| End Of ThreeJs Script |===| \\
 
 //_ Exporting _
-export { animate }; //this function contains the render and it calls itself
+export { animate }; //this function contains the renderer and it calls itself
