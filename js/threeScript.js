@@ -7,7 +7,7 @@
     //import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
     //import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
     //- Shaders import
-    import { vertexShader as vertShader, fragmentShader as fragShader } from "../shaders/shaders";
+    import { vertexShader as vertShader, fragmentShader as fragShader } from "../shaders/shader";
     //=============================================================================================
 
     //- Canvas
