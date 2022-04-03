@@ -7,7 +7,7 @@
     //import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
     //import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
     //- Shaders import
-    import { vertexShader as vertShader, fragmentShader as fragShader } from "../shaders/shader";
+    import { vertexShader as vertShader, fragmentShader as fragShader } from './shaders/shader';
     //=============================================================================================
 
     //- Canvas
@@ -130,14 +130,13 @@
     renderer.setSize(size.width, size.height);
     animate();
 
-    function animate() {
-
+    animate = () => {
         requestAnimationFrame(animate);
         //Animate controls
         controls.update();  //required if controls.enableDamping = true, or if controls.autoRotate = true
         //Render each frame
         renderer.render(scene, camera);
-    }
+    };
 
 // |===| End Of ThreeJs Script |===| \\
 
